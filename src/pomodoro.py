@@ -17,10 +17,13 @@ def cuenta_atras(s, etiqueta):
 def main():
     #pprint(loglines)
     parametros = define_parametros()
-    parametros = list(
-        map(
-            int,
-            parametros))
+    try: 
+        parametros = list(
+            map(
+                int,
+                parametros))
+    except IOError as e:
+        print('error de tipo:' + e)
     for r in range(parametros[0]):
         cuenta_atras(parametros[1], 'Workout ' + str(r + 1) + ' de ' + str(parametros[0]))
         if r < parametros[0]:
