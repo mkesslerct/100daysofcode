@@ -51,7 +51,7 @@ def time_between_shutdowns(loglines):
 
 
 
-wdef main():
+def main():
     #pprint(loglines)
     print(convert_to_datetime('INFO 2014-07-03T23:27:51 supybot Shutdown initiated.\n'))
     print(time_between_shutdowns(loglines))
