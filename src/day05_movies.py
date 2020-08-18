@@ -14,6 +14,7 @@ def cargar_datos():
                     line['movie_title']).rstrip()
                 director = line['director_name']
             except ValueError:
+                continue
             m = Movie(title = movie_title, year = 2002, score = 3.2)
             movies[director].append(m)
     return(movies)
