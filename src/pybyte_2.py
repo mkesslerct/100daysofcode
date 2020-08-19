@@ -28,7 +28,7 @@ def convert_to_datetime(line):
        returns:
        datetime(2014, 7, 3, 23, 27, 51)
     """
-    fecha_string = re.findall('\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}', line)
+    fecha_string = re.findall(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}', line)
     fecha = datetime.strptime(fecha_string[0], '%Y-%m-%dT%H:%M:%S')
     return(fecha)
 
